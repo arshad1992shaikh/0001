@@ -7,7 +7,7 @@
 <body>
   <div class="container">
     <h1>Login</h1>
-    <form id="loginForm">
+    <form id="loginForm" onsubmit="return redirectToNextPage();">
       <div class="form-group">
         <label for="username">Username</label>
         <input type="text" class="form-control" id="username" placeholder="Enter username">
@@ -21,14 +21,15 @@
   </div>
 
   <script>
-    document.getElementById('loginForm').addEventListener('submit', function(event) {
+    function redirectToNextPage() {
       event.preventDefault();
       var username = document.getElementById('username').value;
       var password = document.getElementById('password').value;
       sessionStorage.setItem('username', username);
       sessionStorage.setItem('password', password);
-      window.location.href = 'nextpage.html';
-    });
+      window.location.href = "nextpage.html";
+      return false;
+    }
   </script>
 </body>
 </html>
