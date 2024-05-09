@@ -12,7 +12,6 @@ document.getElementById("myForm").addEventListener("submit", function(event) {
                             "<p>Email: " + email + "</p>" +
                             "<p>Password: " + password + "</p>" +
                             "<p>Checkbox Checked: " + isChecked + "</p>";
-
     
     console.log("Email:", email);
     console.log("Password:", password);
