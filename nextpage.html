@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Details</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Next Page</h1>
+    <p>Welcome, <span id="username"></span></p>
+    <p>Your password is: <span id="password"></span></p>
+  </div>
+
+  <script>
+    document.getElementById('username').textContent = sessionStorage.getItem('username');
+    document.getElementById('password').textContent = sessionStorage.getItem('password');
+  </script>
+</body>
+</html>
